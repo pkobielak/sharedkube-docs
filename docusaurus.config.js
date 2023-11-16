@@ -48,6 +48,9 @@ const config = {
             './src/css/custom.css'
           ]
         },
+        gtag: {
+            trackingID: 'G-Z1LWKKWM7G',
+        }
       }),
     ],
   ],
