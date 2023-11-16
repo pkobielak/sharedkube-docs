@@ -48,7 +48,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/sharedkubeio/sharedkube-docs/tree/main/',
         },
         blog: false,
         theme: {
@@ -79,7 +79,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/sharedkubeio/sharedkube-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -93,7 +93,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/overview',
               },
             ],
           },
@@ -114,26 +114,12 @@ const config = {
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} sharedkube`,
       },
       prism: {
         theme: PrismLight,
         darkTheme: PrismDark,
-        additionalLanguages: ['shell-session'],
       },
     }),
 };
