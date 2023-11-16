@@ -4,27 +4,19 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
-
-import PrismLight from './src/utils/prismLight.ts';
 import PrismDark from './src/utils/prismDark.ts';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'sharedkube docs',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.png',
+  tagline: 'Welcome to Cloud Native Ecosystem!',
+  favicon: 'img/favicon-logo.png',
 
   // Set the production url of your site here
   url: 'https://docs.sharedkube.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'sharedkube', // Usually your GitHub org/user name.
-  projectName: 'sharedkube-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -63,20 +55,28 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+      },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo-social-card.jpg',
       navbar: {
         title: 'sharedkube docs',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'sharedkube logo',
+          src: 'img/favicon-logo.png',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            label: 'dashboard',
             position: 'left',
-            label: 'Tutorial',
+            href: 'https://api.sharedkube.io',
+          },
+          {
+            label: 'product',
+            position: 'left',
+            href: 'https://sharedkube.io',
           },
           {
             href: 'https://github.com/sharedkubeio/sharedkube-docs',
@@ -87,38 +87,9 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/overview',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-        ],
         copyright: `Copyright © ${new Date().getFullYear()} sharedkube`,
       },
       prism: {
-        theme: PrismLight,
         darkTheme: PrismDark,
       },
     }),
