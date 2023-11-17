@@ -1,5 +1,7 @@
 # sharedkube-docs
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/53298ef5-1f59-4c2d-a8f8-d5a25c689151/deploy-status)](https://app.netlify.com/sites/astounding-eclair-425059/deploys)
+
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
