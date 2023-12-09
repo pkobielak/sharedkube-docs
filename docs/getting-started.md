@@ -48,10 +48,10 @@ helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx \
     --set resources.limits.memory=128Mi \
     --set service.type=ClusterIP \
     --set ingress.enabled=true \
-    --set ingress.hostname=sk-chocolatefig.sharedkube.io
+    --set ingress.hostname=<your_namespace>.sharedkube.io
 ```
 
-Now you can access your application via https://sk-chocolatefig.sharedkube.io.
+Now you can access your application via https://<your_namespace>.sharedkube.io.
 
 Read more in [Cloud Native Deployment](./cloud-native-ecosystem/cloud-native-deployment) guide.
 At sharedkube, we are making sure to follow official 
