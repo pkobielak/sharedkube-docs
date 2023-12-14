@@ -48,7 +48,7 @@ helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx \
     --set resources.limits.memory=128Mi \
     --set service.type=ClusterIP \
     --set ingress.enabled=true \
-    --set ingress.hostname=<your_namespace>.sharedkube.io
+    --set ingress.hostname=&lt;your_namespace&gt;.sharedkube.io
 ```
 
 Now you can access your application via https://<your_namespace>.sharedkube.io.
