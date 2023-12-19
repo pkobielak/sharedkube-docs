@@ -41,7 +41,7 @@ within 90 seconds.
   - ✅ **Max 90 sec graceful termination:** To ensure high availability, the application must gracefully
 terminate within 90 seconds.
 
-To understand why those are required, have a look at the [Architecture](../architecture) section.
+To understand why those are required, have a look at the [Architecture](../architecture/infrastructure) section.
 
 ### Example cloud native deployment
 

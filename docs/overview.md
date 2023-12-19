@@ -23,8 +23,8 @@ infrastructure.
 
 Sharedkube offers a public Kubernetes cluster service, unique in its affordability 
 and management, alongside private cluster management for larger enterprise needs. 
-With sharedkube, you get a production-ready environment without the need for 
-in-house Kubernetes expertise.
+With sharedkube, you get a production-ready environment without the need for a lot
+of in-house Kubernetes expertise.
 
 ### Features
 

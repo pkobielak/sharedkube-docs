@@ -53,6 +53,6 @@ helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx \
 
 Now you can access your application via `https://<your_namespace>.sharedkube.io`.
 
-Read more in [Cloud Native Deployment](./cloud-native-ecosystem/cloud-native-deployment) guide.
+Read more in [Cloud Native Deployment](./user-guides/cloud-native-deployment) guide.
 At sharedkube, we are making sure to follow official 
 [CNCF definition](https://github.com/cncf/toc/blob/main/DEFINITION.md) of Cloud Native Ecosystem.
