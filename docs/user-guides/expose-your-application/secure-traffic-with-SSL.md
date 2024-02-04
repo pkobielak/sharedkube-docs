@@ -13,10 +13,6 @@ subdomain in the browser. It should be marked as secured by `Google Trust Servic
 
 ![Secured subdomain](./img/secured_subdomain.png)
 
-However, if you use deeper levels of subdomains like `level2.sk-chocolatefig.sharedkube.io`
-or deeper, you need to request SSL certificate for your subdomain by contacting us via
-[Slack](https://join.slack.com/t/sharedkube-community/shared_invite/zt-1ocap8cg6-boDX9eEPSQBQ0S6zllzcGA)
-or [email](mailto:support@sharedkube.io).
 
 ### Securing custom domain
 

@@ -41,12 +41,12 @@ within 90 seconds.
   - ✅ **Max 90 sec graceful termination:** To ensure high availability, the application must gracefully
 terminate within 90 seconds.
 
-To understand why those are required, have a look at the [Architecture](../architecture/infrastructure) section.
+To understand why those are required, have a look at the [Architecture](/architecture/infrastructure) section.
 
 ### Example cloud native deployment
 
 Let's take a look at a simple example of a cloud native deployment by expanding on the example from
-the [Getting Started Guide](../getting-started).
+the [Getting Started Guide](/getting-started).
 
 We assume that our namespace name is `sk-chocolatefig`.
 

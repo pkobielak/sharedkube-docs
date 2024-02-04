@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: Overview
+slug: /
 ---
 
 ## Introduction
@@ -35,8 +36,8 @@ of in-house Kubernetes expertise.
 
 ### Getting Started
 
-To begin using sharedkube, follow our [Getting Started Guide](getting-started.md).
-Learn more about managing and deploying your applications with our [User Guides](#).
+To begin using sharedkube, follow our [Getting Started Guide](getting-started).
+Learn more about managing and deploying your applications with our [User Guides](category/user-guides).
 
 Thank you for choosing sharedkube as your partner in cloud-native development. 
 Our expert team is dedicated to providing you with a robust platform that supports 

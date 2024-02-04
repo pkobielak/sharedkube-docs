@@ -26,6 +26,10 @@ all deeper levels of subdomains like `level2.sk-chocolatefig.sharedkube.io` or
 To use your subdomain to create ingress, you need to set `spec.rules[0].host` field to your
 subdomain name.
 
+:::warning
+Ensure you accurately set the `spec.rules[0].host` field to your subdomain name to avoid any issues with ingress creation.
+:::
+
 Here is an example of ingress manifest that uses `sk-chocolatefig.sharedkube.io` subdomain:
 
 ```yaml title="ingress.yaml"
