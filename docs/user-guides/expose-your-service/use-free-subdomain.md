@@ -8,6 +8,10 @@ In all sharedkube packages you have access to one free subdomain on sharedkube.i
 You can use it to expose your applications via 
 [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
+:::info
+All subdomains are automatically secured with SSL certificates.
+:::
+
 ### Get your subdomain name
 
 Your subdomain name is randomly generated and looks like this: `<generated_name>.sharedkube.io`.
