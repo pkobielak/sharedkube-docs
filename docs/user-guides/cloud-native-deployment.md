@@ -48,7 +48,7 @@ To understand why those are required, have a look at the [Architecture](/archite
 Let's take a look at a simple example of a cloud native deployment by expanding on the example from
 the [Getting Started Guide](/getting-started).
 
-We assume that our namespace name is `sk-chocolatefig`.
+We assume that our namespace name is `<namespace_name>`.
 
 We will operate now on `values.yaml` file that is used by Helm to deploy the application instead
 of using `--set` flags.
@@ -66,7 +66,7 @@ service:
   type: ClusterIP
 ingress:
   enabled: true
-  hostname: sk-chocolatefig.sharedkube.io
+  hostname: <namespace_name>.sharedkube.io
 # ---
 
 # Production settings
@@ -80,7 +80,7 @@ terminationGracePeriodSeconds: 90
 
 Deploy the application that meets minimal production requirements:
 ```shell
-helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx -f values.yaml
+helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx --version 15.10.0 -f values.yaml
 ```
 
 Done! 🎉

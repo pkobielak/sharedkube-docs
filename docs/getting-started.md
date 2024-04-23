@@ -42,6 +42,7 @@ In the example below we will:
 
 ```shell
 helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx \
+    --version 15.10.0 \
     --set resources.requests.cpu=100m \
     --set resources.requests.memory=128Mi \
     --set resources.limits.cpu=100m \
