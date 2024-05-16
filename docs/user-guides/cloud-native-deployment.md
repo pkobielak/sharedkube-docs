@@ -80,7 +80,7 @@ terminationGracePeriodSeconds: 90
 
 Deploy the application that meets minimal production requirements:
 ```shell
-helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx --version 15.10.0 -f values.yaml
+helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx --version 15.9.3 -f values.yaml
 ```
 
 Done! 🎉
