@@ -49,7 +49,11 @@ const config = {
           ]
         },
         gtag: {
-            trackingID: 'G-Z1LWKKWM7G',
+          trackingID: 'G-Z1LWKKWM7G',
+          anonymizeIP: false,
+        },
+        googleTagManager:{
+            containerId: 'GTM-NTSX3CF8'
         }
       }),
     ],
