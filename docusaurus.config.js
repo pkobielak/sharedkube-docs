@@ -8,7 +8,7 @@ import PrismDark from './src/utils/prismDark.ts';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'sharedkube docs',
+  title: 'Sharedkube Docs',
   tagline: 'Welcome to Cloud Native Ecosystem!',
   favicon: 'img/favicon-logo.png',
 
@@ -73,19 +73,18 @@ const config = {
       // Replace with your project's social card
       image: 'img/logo-social-card.jpg',
       navbar: {
-        title: 'sharedkube docs',
         logo: {
-          alt: 'sharedkube logo',
-          src: 'img/favicon-logo.png',
+          alt: 'Sharedkube Logo',
+          src: 'img/logo_whiteC.png',
         },
         items: [
           {
-            label: 'dashboard',
+            label: 'Dashboard',
             position: 'left',
             href: 'https://api.sharedkube.io',
           },
           {
-            label: 'product',
+            label: 'Product',
             position: 'left',
             href: 'https://sharedkube.io',
           },

@@ -55,5 +55,6 @@ This YAML snippet demonstrates how to request a 10Gi volume using the "fast-ebs"
 class.
 
 For assistance or more information on configuring storage for your applications on sharedkube,
-please contact us via [Slack](https://join.slack.com/t/sharedkube-community/shared_invite/zt-1ocap8cg6-boDX9eEPSQBQ0S6zllzcGA)
+please contact us via Intercom chat in the Dashboard
+or via [Slack](https://join.slack.com/t/sharedkube-community/shared_invite/zt-1ocap8cg6-boDX9eEPSQBQ0S6zllzcGA)
 or [email](mailto:support@sharedkube.io).

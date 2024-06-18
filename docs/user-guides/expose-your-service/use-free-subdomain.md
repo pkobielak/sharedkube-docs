@@ -8,22 +8,22 @@ In all sharedkube packages you have access to one free subdomain on sharedkube.i
 You can use it to expose your applications via 
 [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
-:::info
-All subdomains are automatically secured with SSL certificates.
+:::warning
+Make sure to enable managed Cert-Manager in the UI to get free SSL certificates for your subdomains.
 :::
 
 ### Get your subdomain name
 
-Your subdomain name is randomly generated and looks like this: `<generated_name>.sharedkube.io`.
+Your subdomain name is randomly generated and looks like this: `<namespace_name>.sharedkube.io`.
 
-To check your `generated_name` log in to [Dashboard](https://api.sharedkube.io) and check 
-under `AWS Credentials` section the `AWS_USER` field. It will begin with `sk-` prefix.
+To check your `namespace_name` log in to [Dashboard](https://api.sharedkube.io) and under your zone details check
+`Namespace Name:` field. It will begin with `sk-` prefix.
 
-![AWS_USER field location](./img/aws_user_field_location.png)
+![namespace_name_location_screenshot.png](img/namespace_name_location_screenshot.png)
 
-This example user subdomain name is `sk-chocolatefig.sharedkube.io`. Feel free to also use
-all deeper levels of subdomains like `level2.sk-chocolatefig.sharedkube.io` or 
-`level3.level2.sk-chocolatefig.sharedkube.io` and so on.
+This example user subdomain name is `sk-cyancitron.sharedkube.io`. Feel free to also use
+all deeper levels of subdomains like `level2.sk-cyancitron.sharedkube.io` or 
+`level3.level2.sk-cyancitron.sharedkube.io` and so on.
 
 ### Use your subdomain to create ingress
 
@@ -34,19 +34,19 @@ subdomain name.
 Ensure you accurately set the `spec.rules[0].host` field to your subdomain name to avoid any issues with ingress creation.
 :::
 
-Here is an example of ingress manifest that uses `sk-chocolatefig.sharedkube.io` subdomain:
+Here is an example of ingress manifest that uses `sk-cyancitron.sharedkube.io` subdomain:
 
 ```yaml title="ingress.yaml"
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-release-nginx
-  namespace: sk-chocolatefig
+  namespace: sk-cyancitron
 spec:
   ingressClassName: nginx
   rules:
 // highlight-next-line
-  - host: sk-chocolatefig.sharedkube.io
+  - host: sk-cyancitron.sharedkube.io
     http:
       paths:
       - backend:
@@ -58,4 +58,8 @@ spec:
         pathType: ImplementationSpecific
 ```
 
-Good job, you have just created your first ingress on sharedkube! 🎉
+Good job, you have just created your first ingress on Sharedkube! 🎉
+
+In case of any issues contact us via Intercom chat in the dashboard or [Slack](https://join.slack.com/t/sharedkube-community/shared_invite/zt-1ocap8cg6-boDX9eEPSQBQ0S6zllzcGA)
+or [email](mailto:support@sharedkube.io). We will do our best to help
+you with the setup.
