@@ -89,6 +89,11 @@ const config = {
             href: 'https://sharedkube.io',
           },
           {
+            label: 'Blog',
+            position: 'left',
+            href: 'https://blog.sharedkube.io',
+          },
+          {
             href: 'https://github.com/sharedkubeio/sharedkube-docs',
             label: 'GitHub',
             position: 'right',
