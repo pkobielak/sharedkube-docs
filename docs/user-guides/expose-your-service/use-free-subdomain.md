@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Use Free Subdomain
 
-In all sharedkube packages you have access to one free subdomain on sharedkube.io domain.
+In all Sharedkube packages you have access to a free subdomain on sharedkube.io domain.
 You can use it to expose your applications via 
 [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
@@ -21,9 +21,9 @@ To check your `namespace_name` log in to [Dashboard](https://api.sharedkube.io) 
 
 ![namespace_name_location_screenshot.png](img/namespace_name_location_screenshot.png)
 
-This example user subdomain name is `sk-cyancitron.sharedkube.io`. Feel free to also use
-all deeper levels of subdomains like `level2.sk-cyancitron.sharedkube.io` or 
-`level3.level2.sk-cyancitron.sharedkube.io` and so on.
+This example user subdomain name is `sk-roundmelon.sharedkube.io`. Feel free to also use
+all deeper levels of subdomains like `level2.sk-roundmelon.sharedkube.io` or
+`level3.level2.sk-roundmelon.sharedkube.io` and so on.
 
 ### Use your subdomain to create ingress
 
@@ -34,19 +34,19 @@ subdomain name.
 Ensure you accurately set the `spec.rules[0].host` field to your subdomain name to avoid any issues with ingress creation.
 :::
 
-Here is an example of ingress manifest that uses `sk-cyancitron.sharedkube.io` subdomain:
+Here is an example of ingress manifest that uses `sk-roundmelon.sharedkube.io` subdomain:
 
 ```yaml title="ingress.yaml"
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-release-nginx
-  namespace: sk-cyancitron
+  namespace: sk-roundmelon
 spec:
   ingressClassName: nginx
   rules:
 // highlight-next-line
-  - host: sk-cyancitron.sharedkube.io
+  - host: sk-roundmelon.sharedkube.io
     http:
       paths:
       - backend:

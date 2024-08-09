@@ -3,34 +3,114 @@ sidebar_position: 2
 title: Getting Started
 ---
 
-### Download tools
+### Download Sharedkube CLI
 
-Each link below will take you to the installation instructions for the respective tool.
+#### Install from [Homebrew](https://brew.sh/):
+  ```shell
+  brew tap sharedkubeio/skctl
+  brew install skctl
+  skctl
+  ```
 
-- [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-- [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
+#### Install with [pipx](https://pipx.pypa.io/stable/):
+  ```shell
+  pipx install git+https://github.com/sharedkubeio/skctl
+  ```
 
-### Export your AWS Credentials
+### Switch to your zone
 
-Export your AWS credentials by setting the following environment variables:
+:::warning
+Remember to first create the zone in the [Sharedkube app](https://api.sharedkube.io).
+:::
 
-```shell
-export AWS_ACCESS_KEY_ID=<actual_id>
-export AWS_SECRET_ACCESS_KEY=<actual_secret>
-export AWS_REGION=<assigned_region>
+1. **Login**:
+    ::::note
+    Run the command below, replacing `<your_api_token>` with your actual token.
+
+    ``` shell
+    skctl login <your_api_token>
+    ```
+
+    :::tip
+    If you have used `skctl` before, confirm the override of any existing token by typing `y`.
+
+    ``` shell
+    # A token is already saved. Do you want to override it? [y/N]: y
+    ```
+    :::
+
+    Example:
+    ``` yaml
+    $ skctl login a43f4ag5hsr56hjr6sr6hsr6hsr6hsr6yhrfes4se4fgsxxxxxxxxxxxxxxxxxxx
+    # Login successful. Token saved. Hello Patryk
+    ```
+    ::::
+
+2. **List Zones**:
+    :::note
+    View available zones with:
+
+    ``` shell
+    skctl zones
+    ```
+
+    Example:
+    ``` yaml
+    $ skctl zones
+    # ID                                    Name                    CPU  Memory    Storage    Status    Type
+    # 71xxxx28-xxxx-4835-9868-xxxxxx6de5ea  my-company-dev          1    2Gi       10G        draft     Zone.Namespace.NamespaceRQuota
+    # 0fxxxx3d-xxxx-4a47-9a74-xxxxxx25a000  my-company-prod         1    2Gi       10G        running   Zone.Namespace.NamespaceRQuota
+    ```
+    :::
+
+3. **Switch Zone**:
+   :::note
+   Switch to a specific zone by updating kubeconfig context.
+
+   Command:
+   ``` shell
+    skctl switch <zone_name>
+    ```
+
+    Example:
+    ``` yaml
+    $ skctl switch my-company-prod
+    # Updated kubeconfig for zone: my-company-prod
+    ```
+    :::
+
+### Useful Additional Commands
+
+:::tip
+**Verify Connection**
+
+``` shell
+kubectl get pods
 ```
 
-### Setup your environment
-Configure your AWS EKS by updating the kubeconfig file and setting the Kubernetes
-context to your namespace:
+Example:
+``` yaml
+$ kubectl get pods
+# No resources found in sk-roundmelon namespace. # It works!
+```
+:::
 
-```shell
-aws eks update-kubeconfig --region $AWS_REGION --name sharedkube
-kubectl config set-context --current --namespace <your_namespace>
-kubectl get pods # It works!
+:::tip
+**Check the current namespace name**
+
+``` shell
+kubectl config view --minify --output 'jsonpath={..namespace}'
 ```
 
-You have access to your namespace and can now deploy your applications.
+Example:
+``` yaml
+$ kubectl config view --minify --output 'jsonpath={..namespace}'
+# sk-roundmelon
+```
+:::
+
+Now you’re ready to deploy your applications in Sharedkube.
+
 
 ### Deploy your first application
 You can now deploy your first application to your namespace in a common way using
@@ -55,5 +135,5 @@ helm install my-release oci://registry-1.docker.io/bitnamicharts/nginx \
 Now you can access your application via `https://<your_namespace>.sharedkube.io`.
 
 Read more in [Cloud Native Deployment](./user-guides/cloud-native-deployment) guide.
-At sharedkube, we are making sure to follow official 
+At Sharedkube, we are making sure to follow official
 [CNCF definition](https://github.com/cncf/toc/blob/main/DEFINITION.md) of Cloud Native Ecosystem.
